@@ -1,0 +1,230 @@
+/* Global Settings */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e6cc !important; /* Light beige background */
+    color: #5a4a42 !important; /* Soft brown text color */
+}
+
+/* Masonry Grid Enhancements */
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Tile Styling */
+.tile {
+    position: relative;
+    background: #fff9e6; /* Very light beige for tiles */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Slightly darker shadow for more depth */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+    height: 200px;
+}
+
+.tile:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+    background-color: #e3d7b1; /* Slightly darker beige when hovered */
+}
+
+/* Tile Content Styling */
+.tile-content {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #5a4a42;
+    padding: 20px;
+    background-color: #f5e6cc; /* Light beige background */
+    border-radius: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Education Section Styling */
+.education {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.education h2 {
+    font-size: 2em;
+    color: #5a4a42;
+    margin-bottom: 20px;
+}
+
+/* Timeline Layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px;
+    background: #f5e6cc; /* Light beige background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+    background-color: #e3d7b1; /* Slightly darker beige on hover */
+}
+
+.timeline-item h3 {
+    font-size: 1.8em;
+    color: #5a4a42;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-item .degree {
+    font-size: 1.1em;
+    color: #6c4f38; /* Slightly darker brown for degree titles */
+    margin-bottom: 10px;
+}
+
+.timeline-item .details {
+    font-size: 1em;
+    color: #5a4a42;
+    line-height: 1.5;
+}
+
+/* Timeline Connector Line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #5a4a42;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Add icons for each education milestone */
+.timeline-item::after {
+    content: '🎓'; /* Graduation cap emoji */
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: #5a4a42;
+}
+
+
+/* Work Experience Styling */
+.work-experience {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience h2 {
+    font-size: 2em;
+    color: #5a4a42;
+    margin-bottom: 20px;
+}
+
+.experience {
+    background: #f5e6cc; /* Light beige background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.experience:hover {
+    transform: scale(1.03);
+    background-color: #e3d7b1; /* Darker beige on hover */
+}
+
+.experience h3 {
+    font-size: 1.8em;
+    color: #5a4a42;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 1.1em;
+    color: #6c4f38; /* Slightly darker brown for roles */
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1em;
+    color: #5a4a42;
+    line-height: 1.5;
+}
+
+/* Optional: Add a "Read More" Link */
+.experience:hover .description {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+/* Add Hover Effect on Text */
+.tile:hover .tile-content {
+    color: #fff; /* Change text color to white on hover */
+}
+
+/* Styles for Large and Wide Tiles */
+.large {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+    text-align: center;
+    padding: 10px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img {
+    width: 40px; /* Slightly bigger icon */
+    height: auto;
+    transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Icon Hover Effect */
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons img:hover {
+    filter: brightness(0) invert(1); /* Monochrome effect on hover */
+}
+
+
